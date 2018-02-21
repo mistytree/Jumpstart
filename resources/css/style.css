@@ -256,3 +256,11 @@ color: #337ab7;
     font-size: 1.2rem;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .jumbotron.jumbotron-bike h1,
+  .jumbotron.jumbotron-flowers h1,
+  .jumbotron.jumbotron-beer h1,
+  .jumbotron.jumbotron-duffel h1 {
+    font-size: 3.15rem;
+  }
