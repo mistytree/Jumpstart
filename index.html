@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>Jumpstart</title>
 
-    <link rel="icon" href="./resources/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./resources/css/reset.css" type="text/css">
     <!-- Loading 'Open Sans' and 'Monoton' Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Monoton|Open+Sans:400,600,700" rel="stylesheet">
@@ -17,11 +17,15 @@
 
   </head>
 
-  <body id="bootstrap-overrides">  <!-- ID to override Bootstrap classes in 'style.css' -->
+  <body id="bootstrap-overrides">  <!-- ID to override Bootstrap classes in 'style.css' if needed -->
 
     <header>
 
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <!-- Changes in Bootstrap 4.0.0 'navbar-default' changed to 'navbar-light -->
+      <!-- 'navbar-fixed-top' changed to 'fixed-top'-->
+      <!-- Not Bootstrap version, but Flexbox implementation. -->
+      <!-- Failed to implement properly Bootstrap version because of unfamiliarity with new Bootstrap 4.0.0 -->
+      <nav class="navbar">
         <div class="container">
           <ul>
             <li><a href="#">Explore</a></li>
@@ -84,7 +88,12 @@
 
         <div class="row">
 
-          <img class="col-lg-6 col-sm-12 left" src="./resources/img/featured-project.png" alt="Red wooden house in snowy italian mountains">
+          <div class="col-lg-6 col-sm-12">
+            <!-- Important to place image into separate <div> container within Bootstrap 'col-lg-6 col-sm-12' class in order to scale within container and not overflow! -->
+            <div class="image-container">
+              <img src="./resources/img/featured-project.png" alt="Red wooden house in snowy italian mountains">
+            </div>
+          </div>
 
           <div class="col-lg-3 col-sm-6 middle">
             <h3>DeFrost: A Documentary</h3>
@@ -169,6 +178,7 @@
     </section>
 
     <section>
+
       <div class="jumbotron bottom-page">
         <h1>Having trouble thinking of an idea?</h1>
         <div class="tagline">
@@ -177,6 +187,7 @@
         </div>
           <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
       </div>
+      
     </section>
 
     <!-- jQuery 3.2.1 library CDN link -->
